@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redimensionnement, Déplacement et Duplication d'une Image dans un Canvas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="toolbar">
+    <input type="file" id="uploadImage" accept="image/*">
+    <button class="print-button" onclick="printCanvas()">Imprimer</button>
+    <button class="delete-button" onclick="deleteSelectedImage()">Supprimer l'image</button>
+    <button class="duplicate-button" onclick="duplicateSelectedImage()">Dupliquer l'image</button>
+</div>
+
+<canvas id="canvas" width="794" height="1123"></canvas> <!-- Dimensions A4 en pixels à 96 DPI -->
+
+<script src="script.js"></script>
+
+</body>
+</html>

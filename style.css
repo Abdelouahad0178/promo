@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+canvas {
+    border: 1px solid #000;
+    width: 210mm;
+    height: 297mm;
+}
+
+.toolbar {
+    margin-bottom: 10px;
+}
+
+.toolbar input[type="file"] {
+    display: block;
+}
+
+.print-button, .delete-button, .duplicate-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.print-button:hover, .delete-button:hover, .duplicate-button:hover {
+    background-color: #45a049;
+}
+
+.delete-button {
+    background-color: #f44336;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+
+.duplicate-button {
+    background-color: #2196F3;
+}
+
+.duplicate-button:hover {
+    background-color: #1976D2;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    canvas, canvas * {
+        visibility: visible;
+    }
+
+    canvas {
+        width: 210mm;
+        height: 297mm;
+        border: none;
+    }
+}
